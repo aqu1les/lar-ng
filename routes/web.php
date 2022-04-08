@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'ng'], function () {
+    Route::view('docs', 'ng.docs');
+    Route::view('lazy', 'ng.lazy');
+});
