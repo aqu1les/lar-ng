@@ -1,5 +1,5 @@
 @extends('ng-layout')
 
 @section('content')
-    <app-root component="app-lazy"></app-root>
+    <app-root module="lazy"></app-root>
 @endsection

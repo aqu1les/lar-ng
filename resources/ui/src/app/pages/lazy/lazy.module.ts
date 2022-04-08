@@ -6,4 +6,6 @@ import { LazyComponent } from './lazy.component';
   declarations: [LazyComponent],
   imports: [CommonModule],
 })
-export class LazyModule {}
+export class LazyModule {
+  static entry = LazyComponent;
+}

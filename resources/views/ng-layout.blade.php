@@ -410,7 +410,6 @@
 
     <script src="{{ asset('ui/runtime.js') }}" type="module"></script>
     <script src="{{ asset('ui/polyfills.js') }}" type="module"></script>
-    <script src="{{ asset('ui/vendor.js') }}" type="module"></script>
     <script src="{{ asset('ui/main.js') }}" type="module"></script>
 </body>
 

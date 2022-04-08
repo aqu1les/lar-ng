@@ -6,12 +6,7 @@ import {
   ViewChild,
   ViewContainerRef,
 } from '@angular/core';
-
-export const COMPONENTS: { [key: string]: any } = {
-  'app-lazy': () =>
-    import('./lazy/lazy.component').then((m) => m.LazyComponent),
-  'app-doc': () => import('./doc/doc.component').then((m) => m.DocComponent),
-};
+import { MODULES } from './pages/modules';
 
 @Component({
   selector: 'app-root',
@@ -28,10 +23,10 @@ export class AppComponent implements AfterViewInit {
   ) {}
 
   async ngAfterViewInit() {
-    const componentName =
-      this.elementRef.nativeElement.getAttribute('component')!;
+    const componentName = this.elementRef.nativeElement.getAttribute('module')!;
+    const module = await MODULES[componentName]();
 
-    this.container.createComponent(await COMPONENTS[componentName](), {
+    this.container.createComponent(module.entry, {
       injector: this.injector,
     });
   }

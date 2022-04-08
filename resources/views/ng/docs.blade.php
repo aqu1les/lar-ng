@@ -1,5 +1,5 @@
 @extends('ng-layout')
 
 @section('content')
-    <app-root component="app-doc"></app-root>
+    <app-root module="docs"></app-root>
 @endsection

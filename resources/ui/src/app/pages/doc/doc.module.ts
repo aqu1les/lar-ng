@@ -7,4 +7,6 @@ import { DocComponent } from './doc.component';
   declarations: [DocComponent],
   imports: [CommonModule],
 })
-export class DocModule {}
+export class DocModule {
+  static entry = DocComponent;
+}
