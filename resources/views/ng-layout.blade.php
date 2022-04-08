@@ -403,6 +403,7 @@
             font-family: 'Nunito', sans-serif;
         }
     </style>
+    <link rel="stylesheet" href="{{ asset('ui/styles.css') }}">
 </head>
 
 <body class="antialiased">
