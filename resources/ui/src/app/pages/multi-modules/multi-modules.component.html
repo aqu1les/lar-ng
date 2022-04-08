@@ -1,0 +1,12 @@
+<button (click)="goTo('')">Module 1</button>
+<button (click)="goTo('sub')">Sub</button>
+
+<app-router [baseRoute]="baseRoute">
+  <ng-template appRouterSegment>
+    <p>MODULE 1</p>
+  </ng-template>
+
+  <ng-template appRouterSegment path="sub">
+    <p>MODULE 2</p>
+  </ng-template>
+</app-router>

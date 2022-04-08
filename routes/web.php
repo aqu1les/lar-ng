@@ -20,4 +20,5 @@ Route::get('/', function () {
 Route::group(['prefix' => 'ng'], function () {
     Route::view('docs', 'ng.docs');
     Route::view('lazy', 'ng.lazy');
+    Route::view('multi-modules', 'ng.multi-modules');
 });
